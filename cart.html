@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavenly | Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Heavenly</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="cart.html" class="cart-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="cart">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <p>Total: <span id="total-price">$0</span></p>
+        <button class="btn checkout-btn">Checkout</button>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Heavenly. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartItemsContainer = document.getElementById("cart-items");
+            const totalPriceEl = document.getElementById("total-price");
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let total = 0;
+
+            function renderCart() {
+                cartItemsContainer.innerHTML = "";
+                total = 0;
+                cart.forEach((product, index) => {
+                    const productEl = document.createElement("div");
+                    productEl.classList.add("cart-item");
+                    productEl.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="cart-item-image">
+                        <div class="cart-item-info">
+                            <h3>${product.name}</h3>
+                            <p>$${product.price.toFixed(2)}</p>
+                            <button class="btn remove-btn" data-index="${index}">Remove</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(productEl);
+                    total += product.price;
+                });
+                totalPriceEl.textContent = `$${total.toFixed(2)}`;
+            }
+
+            renderCart();
+
+            cartItemsContainer.addEventListener("click", function (e) {
+                if (e.target.classList.contains("remove-btn")) {
+                    const index = e.target.getAttribute("data-index");
+                    cart.splice(index, 1);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    renderCart();
+                }
+            });
+
+            document.querySelector(".checkout-btn").addEventListener("click", function () {
+                alert("Order Confirmed!");
+                localStorage.removeItem("cart");
+                cart = [];
+                renderCart();
+            });
+        });
+    </script>
+</body>
+</html>

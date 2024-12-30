@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Heavenly | Shop
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="header">
+   <div class="container">
+    <a class="logo" href="index.html">
+     Heavenly
+    </a>
+    <nav>
+     <ul class="nav-links">
+      <li>
+       <a href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="shop.html">
+        Shop
+       </a>
+      </li>
+      <li>
+       <a href="about.html">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a class="cart-link" href="cart.html">
+        Cart
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="shop">
+   <h1>
+    Shop
+   </h1>
+   <div class="filters">
+    <label for="price-filter">
+     Filter by Price:
+    </label>
+    <select id="price-filter">
+     <option value="all">
+      All
+     </option>
+     <option value="under-100">
+      Under $100
+     </option>
+     <option value="100-200">
+      $100-$200
+     </option>
+     <option value="above-200">
+      Above $200
+     </option>
+    </select>
+    <label for="type-filter">
+     Filter by Type:
+    </label>
+    <select id="type-filter">
+     <option value="all">
+      All
+     </option>
+     <option value="floral">
+      Floral
+     </option>
+     <option value="woody">
+      Woody
+     </option>
+     <option value="citrus">
+      Citrus
+     </option>
+    </select>
+    <label for="gender-filter">
+     Filter by Gender:
+    </label>
+    <select id="gender-filter">
+     <option value="all">
+      All
+     </option>
+     <option value="women">
+      Women
+     </option>
+     <option value="men">
+      Men
+     </option>
+     <option value="unisex">
+      Unisex
+     </option>
+    </select>
+   </div>
+   <div class="product-grid">
+    <div class="product-card" data-gender="women" data-price="150" data-type="floral">
+     <img alt="Heavenly Rose" src="images/product1.jpg"/>
+     <h3>
+      Heavenly Rose
+     </h3>
+     <p>
+      $150
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=rose">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="men" data-price="120" data-type="woody">
+     <img alt="Heavenly Classic" src="images/product2.jpg"/>
+     <h3>
+      Heavenly Classic
+     </h3>
+     <p>
+      $120
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=classic">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="unisex" data-price="90" data-type="citrus">
+     <img alt="Citrus Delight" src="images/product3.jpg"/>
+     <h3>
+      Citrus Delight
+     </h3>
+     <p>
+      $90
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=citrus-delight">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="women" data-price="200" data-type="floral">
+     <img alt="Bloom Essence" src="images/product4.jpg"/>
+     <h3>
+      Bloom Essence
+     </h3>
+     <p>
+      $200
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=bloom-essence">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="men" data-price="75" data-type="woody">
+     <img alt="Forest Edge" src="images/product5.jpg"/>
+     <h3>
+      Forest Edge
+     </h3>
+     <p>
+      $75
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=forest-edge">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="unisex" data-price="180" data-type="citrus">
+     <img alt="Sunrise Spark" src="images/product6.jpg"/>
+     <h3>
+      Sunrise Spark
+     </h3>
+     <p>
+      $180
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=sunrise-spark">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="women" data-price="250" data-type="floral">
+     <img alt="Golden Petals" src="images/product7.jpg"/>
+     <h3>
+      Golden Petals
+     </h3>
+     <p>
+      $250
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=golden-petals">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="unisex" data-price="140" data-type="woody">
+     <img alt="Earthy Tones" src="images/product8.jpg"/>
+     <h3>
+      Earthy Tones
+     </h3>
+     <p>
+      $140
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=earthy-tones">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="men" data-price="110" data-type="citrus">
+     <img alt="Lime Twist" src="images/product9.jpg"/>
+     <h3>
+      Lime Twist
+     </h3>
+     <p>
+      $110
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=lime-twist">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+    <div class="product-card" data-gender="women" data-price="95" data-type="floral">
+     <img alt="Pink Blossom" src="images/product10.jpg"/>
+     <h3>
+      Pink Blossom
+     </h3>
+     <p>
+      $95
+     </p>
+     <a class="btn view-details" href="product-detail.html?product=pink-blossom">
+      View Details
+     </a>
+     <button class="btn add-to-cart-btn">
+      Add to Cart
+     </button>
+    </div>
+   </div>
+  </main>
+  <footer class="footer">
+   <p>
+    © 2024 Heavenly. All Rights Reserved.
+   </p>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
